@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eternityinfiniivision | ゲーム開発・販売／システム開発／ITコンサル</title>
+
+  <!-- 基础 SEO -->
+  <meta name="description" content="Eternityinfiniivision：日本の個人事業主。ゲーム開発・販売を中心に、Web/クラウドのシステム開発、ITコンサルティングを提供します。" />
+  <meta name="keywords" content="Eternityinfiniivision, ゲーム開発, Steam, DMM, 受託開発, Webシステム, クラウド, ITコンサル" />
+
+  <!-- Open Graph / 社交分享 -->
+  <meta property="og:title" content="Eternityinfiniivision | ゲーム開発・販売" />
+  <meta property="og:description" content="ゲーム開発・販売が主業。Web/クラウドのシステム開発、ITコンサルも対応。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/29383698/JvKP14cB0LUGEIXd.jpg?Expires=1760334854&Signature=ECBsHhNR2jL8dyeW76-uH5snBldZmyJabw6z7lghJxeTaYK4juG8A4sS-Ku5CbDsNWiOFxnRjL6KZaowyKHXVqOuoS2JJ64oe4lKOSfpGKBJiYjLZbBYs~7fjruqaj0TrmMw1EnqrDFeQh3iz4aofzNPWHIYgVz6NNTo~xoLu-pPkvLGIKq2BLCwOwVag4yV2zb~8DpC-14rIIpMVJs1Q1GIQuzbIZ2HVT0-p0bKBnd1GVdGb-KIQ6s1qOJZyARgevO1LPFYUDKfg3H8PwF3Z1c4kB4RfC9HeGjgjwIL~YtwpKOvQ-n3vOWhIvq5MISwsEj39paKVxxSl9NL1ZCIhg__&Key-Pair-Id=K3USGZIKWMDCSX" />
+  <meta property="og:url" content="https://eternityinfiniivision.com" />
+
+  <!-- Favicon（可替换为你的图标） -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- 字体与基础样式 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --brand:#0A66C2;
+      --brand-dark:#084e95;
+      --text:#111827;
+      --muted:#6B7280;
+      --bg:#ffffff;
+      --bg-alt:#F3F4F6;
+      --accent:#10B981;
+      --maxw:1100px;
+      --radius:12px;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans JP", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background:#fff; border-bottom:1px solid #eee;
+      backdrop-filter:saturate(180%) blur(10px);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--text)}
+    .logo img{height:28px; width:auto; border-radius:6px}
+    .nav-links{display:flex; gap:20px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 16px; border-radius:10px; font-weight:600; border:1px solid transparent; cursor:pointer;
+      transition:all .2s ease;
+    }
+    .btn-primary{background:var(--brand); color:#fff}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-outline{border-color:#e5e7eb; color:var(--text); background:#fff}
+    .btn-outline:hover{border-color:#d1d5db; box-shadow:var(--shadow)}
+
+    .lang-switch{display:flex; gap:8px; align-items:center; color:var(--muted); font-size:14px}
+    .lang-switch button{background:#fff; border:1px solid #e5e7eb; padding:6px 10px; border-radius:8px; cursor:pointer}
+    .lang-switch button.active{background:var(--brand); color:#fff; border-color:var(--brand)}
+
+    .hero{padding:70px 0; background:linear-gradient(180deg, #ffffff 0%, #f8fbff 100%)}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr 1fr; gap:40px; align-items:center}
+    .hero h1{font-size:40px; line-height:1.15; margin:0 0 14px}
+    .hero p{font-size:18px; color:var(--muted); margin:0 0 24px}
+    .hero-card{background:#fff; border:1px solid #eef2f7; border-radius:16px; padding:18px; box-shadow:var(--shadow)}
+    .pill{display:inline-block; padding:6px 12px; background:#E6F2FF; color:var(--brand); border-radius:999px; font-weight:600; font-size:12px; margin-bottom:14px}
+
+    .section{padding:56px 0}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    .card{background:#fff; border:1px solid #eef2f7; border-radius:16px; padding:20px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px; font-size:18px}
+    .muted{color:var(--muted)}
+
+    .quote{background:var(--bg-alt); padding:48px 0; border-top:1px solid #eee; border-bottom:1px solid #eee}
+    .quote-inner{display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px}
+    .quote p{font-size:20px; max-width:900px}
+
+    footer{padding:32px 0; border-top:1px solid #eee; color:var(--muted); font-size:14px}
+    .footer-grid{display:grid; grid-template-columns: 1fr auto; gap:20px; align-items:center}
+
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns: 1fr; gap:24px}
+      .grid-3{grid-template-columns: 1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .nav-links{gap:12px}
+      .grid-3{grid-template-columns: 1fr}
+      .hero h1{font-size:32px}
+    }
+  </style>
+
+  <!-- Microsoft Clarity（将 XXXXXXX 替换为你的 Clarity 项目ID） -->
+  <script>
+    // (function(c,l,a,r,i,t,y){
+    //   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    //   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    //   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    // })(window, document, "clarity", "script", "XXXXXXX");
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/29383698/JvKP14cB0LUGEIXd.jpg?Expires=1760334854&Signature=ECBsHhNR2jL8dyeW76-uH5snBldZmyJabw6z7lghJxeTaYK4juG8A4sS-Ku5CbDsNWiOFxnRjL6KZaowyKHXVqOuoS2JJ64oe4lKOSfpGKBJiYjLZbBYs~7fjruqaj0TrmMw1EnqrDFeQh3iz4aofzNPWHIYgVz6NNTo~xoLu-pPkvLGIKq2BLCwOwVag4yV2zb~8DpC-14rIIpMVJs1Q1GIQuzbIZ2HVT0-p0bKBnd1GVdGb-KIQ6s1qOJZyARgevO1LPFYUDKfg3H8PwF3Z1c4kB4RfC9HeGjgjwIL~YtwpKOvQ-n3vOWhIvq5MISwsEj39paKVxxSl9NL1ZCIhg__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Eternityinfiniivision Logo" />
+        <div>Eternityinfiniivision</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about" data-i18n="nav.about">会社概要</a>
+        <a href="#services" data-i18n="nav.services">事業内容</a>
+        <a href="#contact" data-i18n="nav.contact">お問い合わせ</a>
+        <a class="btn btn-outline" href="#contact" data-i18n="nav.cta">無料相談</a>
+        <div class="lang-switch">
+          <span style="display:none" data-i18n="lang.label">言語</span>
+          <button data-lang="ja" class="active">JP</button>
+          <button data-lang="zh">CH</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill" data-i18n="hero.badge">ゲーム開発・販売が主業</span>
+          <h1 data-i18n="hero.title">ゲームで価値を創り、テクノロジーで継続的に伸ばす</h1>
+          <p data-i18n="hero.desc">Eternityinfiniivision は日本の個人事業主。SteamやDMM等でのPCゲームの企画・開発・販売を主軸に、Web/クラウドのシステム開発、ITコンサルティングも支援します。</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="#contact" data-i18n="hero.primary">今すぐ相談</a>
+            <a class="btn btn-outline" href="#services" data-i18n="hero.secondary">事業を見る</a>
+          </div>
+        </div>
+        <div class="hero-card" id="contact">
+          <h3 style="margin:0 0 8px" data-i18n="form.title">お問い合わせ</h3>
+          <p class="muted" style="margin:0 0 12px" data-i18n="form.desc">以下のフォームからご連絡ください。1-2営業日以内に返信いたします。</p>
+          <!-- Microsoft Forms 埋め込み：将 src 替换为你的 Forms 嵌入链接 -->
+          <div style="border:1px dashed #d1d5db; border-radius:12px; overflow:hidden">
+            <!--
+            <iframe width="100%" height="430" src="https://forms.office.com/Pages/ResponsePage.aspx?id=XXXXXX&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border:0; max-width:100%" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+            -->
+            <div style="padding:18px; color:#6b7280; text-align:center" data-i18n="form.placeholder">
+              ここに Microsoft Forms を埋め込んでください（公開前に iframe の src を差し替え）。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:28px; align-items:center">
+          <div>
+            <h2 style="margin:0 0 10px" data-i18n="about.title">会社概要</h2>
+            <p class="muted" data-i18n="about.desc">
+              Eternityinfiniivision は、日本で活動する個人事業主（屋号）。ゲーム分野を中心に、要件定義から運用保守まで一貫して対応し、成果と継続性を重視します。
+            </p>
+            <ul class="muted" style="padding-left:18px; margin-top:8px">
+              <li data-i18n="about.point1">オリジナルタイトルと受託開発の両立</li>
+              <li data-i18n="about.point2">プロモーション・ユーザーサポートまで総合対応</li>
+              <li data-i18n="about.point3">AWS/GCP 等クラウドでのインフラ構築と運用</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px" data-i18n="about.highlights">ハイライト</h3>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+              <div style="background:#F9FAFB; border:1px solid #eef2f7; border-radius:10px; padding:12px">
+                <div style="font-weight:700" data-i18n="about.hl1.t">ゲーム主軸</div>
+                <div class="muted" data-i18n="about.hl1.d">企画〜販売〜運営までワンストップ</div>
+              </div>
+              <div style="background:#F9FAFB; border:1px solid #eef2f7; border-radius:10px; padding:12px">
+                <div style="font-weight:700" data-i18n="about.hl2.t">技術横断</div>
+                <div class="muted" data-i18n="about.hl2.d">Web/クラウド/インフラまで一貫</div>
+              </div>
+              <div style="background:#F9FAFB; border:1px solid #eef2f7; border-radius:10px; padding:12px">
+                <div style="font-weight:700" data-i18n="about.hl3.t">実行力</div>
+                <div class="muted" data-i18n="about.hl3.d">小さく速く検証し継続的に改善</div>
+              </div>
+              <div style="background:#F9FAFB; border:1px solid #eef2f7; border-radius:10px; padding:12px">
+                <div style="font-weight:700" data-i18n="about.hl4.t">信頼性</div>
+                <div class="muted" data-i18n="about.hl4.d">品質・納期・セキュリティの遵守</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section" style="background:var(--bg-alt)">
+      <div class="container">
+        <h2 style="margin-top:0" data-i18n="services.title">事業内容</h2>
+        <div class="grid-3">
+          <div class="card" style="border:2px solid var(--brand)">
+            <h3 data-i18n="services.s1.t">ゲーム開発・販売（主業）</h3>
+            <p class="muted" data-i18n="services.s1.d">
+              SteamやDMM等プラットフォームでのPCゲーム企画・開発・販売・プロモーション。オリジナル制作と受託の両立、マーケ・ユーザーサポートまで総合対応。
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="services.s2.t">システムエンジニア業務</h3>
+            <p class="muted" data-i18n="services.s2.d">
+              Webシステム・クラウドサービスの設計・開発・運用。要件定義から保守まで一貫対応。AWS・GCP等クラウド環境でのインフラ構築。
+            </p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="services.s3.t">ITコンサルティング</h3>
+            <p class="muted" data-i18n="services.s3.d">
+              技術選定、アーキテクチャ、運用改善、コスト最適化など、実装に強い観点から実務へ落とし込みます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="container quote-inner">
+        <p data-i18n="quote.line">「小さく作り、早く試し、丁寧に磨く。」</p>
+        <div class="muted">— Eternityinfiniivision</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        © <span id="y"></span> Eternityinfiniivision. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+      <div>
+        <a href="#contact" data-i18n="footer.contact">お問い合わせ</a> ·
+        <a href="mailto:contact@eternityinfiniivision.com">contact@eternityinfiniivision.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 年份
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // 多语言字典
+    const dict = {
+      ja: {
+        'nav.about':'会社概要','nav.services':'事業内容','nav.contact':'お問い合わせ','nav.cta':'無料相談',
+        'hero.badge':'ゲーム開発・販売が主業',
+        'hero.title':'ゲームで価値を創り、テクノロジーで継続的に伸ばす',
+        'hero.desc':'弊社はSteamやDMM等でのPCゲームの企画・開発・販売を主軸に、Web/クラウドのシステム開発、ITコンサルティングも支援します。',
+        'hero.primary':'今すぐ相談','hero.secondary':'事業を見る',
+        'form.title':'お問い合わせ','form.desc':'以下のフォームからご連絡ください。1-2営業日以内に返信いたします。','form.placeholder':'ここに Microsoft Forms を埋め込んでください（公開前に iframe の src を差し替え）。',
+        'about.title':'会社概要','about.desc':'弊社はゲーム分野を中心に、要件定義から運用保守まで一貫して対応し、成果と継続性を重視します。',
+        'about.point1':'オリジナルタイトルと受託開発の両立','about.point2':'プロモーション・ユーザーサポートまで総合対応','about.point3':'AWS/Azure 等クラウドでのインフラ構築と運用',
+        'about.highlights':'ハイライト','about.hl1.t':'ゲーム主軸','about.hl1.d':'企画〜販売〜運営までワンストップ','about.hl2.t':'技術横断','about.hl2.d':'Web/クラウド/インフラまで一貫','about.hl3.t':'実行力','about.hl3.d':'小さく速く検証し継続的に改善','about.hl4.t':'信頼性','about.hl4.d':'品質・納期・セキュリティの遵守',
+        'services.title':'事業内容','services.s1.t':'ゲーム開発・販売（主業）','services.s1.d':'SteamやDMM等プラットフォームでのPCゲーム企画・開発・販売・プロモーション。オリジナル制作と受託の両立、マーケ・ユーザーサポートまで総合対応。','services.s2.t':'システムエンジニア業務','services.s2.d':'Webシステム・クラウドサービスの設計・開発・運用。要件定義から保守まで一貫対応。AWS・GCP等クラウド環境でのインフラ構築。','services.s3.t':'ITコンサルティング','services.s3.d':'技術選定、アーキテクチャ、運用改善、コスト最適化など、実装に強い観点から実務へ落とし込みます。',
+        'quote.line':'「小さく作り、早く試し、丁寧に磨く。」',
+        'footer.rights':'All rights reserved.','footer.contact':'お問い合わせ'
+      },
+      zh: {
+        'nav.about':'关于我们','nav.services':'业务范围','nav.contact':'联系我们','nav.cta':'免费咨询',
+        'hero.badge':'主营：游戏开发与发行',
+        'hero.title':'以游戏创造价值，用技术实现长期增长',
+        'hero.desc':'我们以 PC 游戏（Steam/DMM 等）策划、开发、发行为核心，同时提供 Web/云端系统开发与 IT 咨询服务。',
+        'hero.primary':'立即联系','hero.secondary':'查看业务',
+        'form.title':'联系我们','form.desc':'请通过以下表单联系我，我们会在 1-2 个工作日内回复。','form.placeholder':'请在此嵌入 Microsoft Forms（发布前将 iframe 的 src 替换为你的表单链接）。',
+        'about.title':'关于我们','about.desc':'我们以游戏为核心，从需求定义到运维保守一体化交付，强调结果与可持续性。',
+        'about.point1':'原创与外包开发并行','about.point2':'覆盖推广与用户支持的全流程','about.point3':'基于 AWS/GCP 的云端基础设施与运维',
+        'about.highlights':'能力亮点','about.hl1.t':'游戏为主','about.hl1.d':'从策划到发行与运营的一站式','about.hl2.t':'技术跨界','about.hl2.d':'覆盖 Web/云/基础设施','about.hl3.t':'执行与验证','about.hl3.d':'小步快跑与持续改进','about.hl4.t':'可靠与安全','about.hl4.d':'质量、交期与安全合规',
+        'services.title':'业务范围','services.s1.t':'游戏开发与发行（主营）','services.s1.d':'面向 Steam、DMM 等平台的 PC 游戏策划、开发、发行与推广；兼顾原创与外包，覆盖营销与用户支持。','services.s2.t':'系统工程师','services.s2.d':'Web 系统与云服务的设计、开发与运维；从需求到保守；在 AWS/GCP 等云环境搭建基础设施。','services.s3.t':'IT 咨询','services.s3.d':'技术选型、架构、运维改进与成本优化，以落地为导向。',
+        'quote.line':'“小步快跑，快速试错，持续打磨。”',
+        'footer.rights':'保留所有权利。','footer.contact':'联系我们'
+      },
+      en: {
+        'nav.about':'About','nav.services':'Services','nav.contact':'Contact','nav.cta':'Free Consultation',
+        'hero.badge':'Core: Game Development & Publishing',
+        'hero.title':'Create value with games, sustain growth with technology',
+        'hero.desc':'We focus on planning, developing, and publishing PC games on platforms like Steam and DMM, and also provide web/cloud system development and IT consulting.',
+        'hero.primary':'Contact Now','hero.secondary':'View Services',
+        'form.title':'Contact','form.desc':'Send us a message via the form below. We will reply within 1–2 business days.','form.placeholder':'Embed your Microsoft Forms here (replace the iframe src before publishing).',
+        'about.title':'About','about.desc':'Centered on gaming, we deliver end-to-end from requirements to operations, emphasizing outcomes and sustainability.',
+        'about.point1':'Balance original IP and client work','about.point2':'End-to-end including marketing and user support','about.point3':'Infra and operations on AWS/GCP',
+        'about.highlights':'Highlights','about.hl1.t':'Game-first','about.hl1.d':'One-stop from planning to publishing','about.hl2.t':'Cross-stack','about.hl2.d':'Web, cloud, and infrastructure','about.hl3.t':'Execution','about.hl3.d':'Iterate fast and improve continuously','about.hl4.t':'Reliability','about.hl4.d':'Quality, deadlines, and security',
+        'services.title':'Services','services.s1.t':'Game Development & Publishing (Core)','services.s1.d':'PC game planning, development, publishing, and promotion for platforms like Steam and DMM. Both original titles and contract work, including marketing and user support.','services.s2.t':'System Engineering','services.s2.d':'Design, development, and operations of web systems and cloud services. End-to-end from requirements to maintenance. Infrastructure on AWS/GCP.','services.s3.t':'IT Consulting','services.s3.d':'Technology selection, architecture, ops improvement, and cost optimization with a practical mindset.',
+        'quote.line':'“Build small, test fast, refine with care.”',
+        'footer.rights':'All rights reserved.','footer.contact':'Contact'
+      }
+    };
+
+    // 切换语言
+    const buttons = document.querySelectorAll('.lang-switch button');
+    function applyLang(lang){
+      buttons.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : (lang==='en' ? 'en' : 'ja');
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        const t = dict[lang][key];
+        if(typeof t === 'string'){ el.textContent = t; }
+      });
+      // 切换后也可更新 <title> 与 meta 描述（可选）
+      const titles = {
+        ja: 'Eternityinfiniivision | ゲーム開発・販売／システム開発／ITコンサル',
+        zh: 'Eternityinfiniivision | 游戏开发·发行 / 系统工程 / IT 咨询',
+        en: 'Eternityinfiniivision | Game Dev & Publishing / Systems / IT Consulting'
+      };
+      document.title = titles[lang] || titles.ja;
+    }
+    buttons.forEach(btn=>btn.addEventListener('click',()=>applyLang(btn.dataset.lang)));
+    // 默认日语
+    applyLang('ja');
+  </script>
+</body>
+</html>

@@ -180,6 +180,28 @@
       .quote{ padding: 32px 0; }
     }
 
+    /* 会社概要：视口变窄即改为上下两行（包括PC缩小窗口） */
+    @media (max-width: 768px){
+      /* 外层两列容器改为单列 */
+      #about .container > div{
+        display: grid;
+        grid-template-columns: 1fr; /* 两列 -> 一列 */
+        gap: 16px;
+        align-items: stretch;       /* 避免高度被强制居中导致留白 */
+      }
+
+      /* 右侧“ハイライト”卡片适当收紧内边距 */
+      #about .card{
+        padding: 16px;
+      }
+
+      /* “ハイライト”卡片内部的小网格：窄屏改为单列，避免拥挤 */
+      #about .card > div[style*="grid-template-columns:1fr 1fr"]{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+    }
     /* 表单 iframe 高度适配视高 */
     #contact iframe{ height: 360px; }
     @media (min-height: 740px){

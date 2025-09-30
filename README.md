@@ -4,5 +4,5 @@
 - #### Virtual and real, fused into living play。
 
 Contact
-- 官网：https://www.eternityinfiniivision.com
-- 联系：hi@eternityinfiniivision.com
+- HP：https://www.eternityinfiniivision.com
+- email：contact@eternityinfiniivision.com
